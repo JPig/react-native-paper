@@ -103,13 +103,13 @@ class Card extends React.Component<Props, State> {
     const { elevation } = this.state;
     const { roundness } = theme;
     const total = React.Children.count(children);
-    const siblings = React.Children.map(
-      children,
-      child =>
-        React.isValidElement(child) && child.type
-          ? child.type.displayName
-          : null
-    );
+    // const siblings = React.Children.map(
+    //   children,
+    //   child =>
+    //     React.isValidElement(child) && child.type
+    //       ? child.type.displayName
+    //       : null
+    // );
     return (
       <AnimatedPaper
         style={[styles.card, { borderRadius: roundness, elevation }, style]}
@@ -122,6 +122,7 @@ class Card extends React.Component<Props, State> {
           style={styles.container}
         >
           <View style={styles.innerContainer}>
+            {/*
             {React.Children.map(
               children,
               (child, index) =>
@@ -133,6 +134,8 @@ class Card extends React.Component<Props, State> {
                     })
                   : child
             )}
+            */}
+            {this.props.children}
           </View>
         </TouchableWithoutFeedback>
       </AnimatedPaper>
