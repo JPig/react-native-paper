@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
   StyleSheet,
 } from 'react-native';
-import Paper from '../../Paper';
+import Paper from '../Paper';
 import withTheme from '../../core/withTheme';
 import type { Theme } from '../../types';
 
